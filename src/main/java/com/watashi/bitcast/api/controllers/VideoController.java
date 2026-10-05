@@ -37,7 +37,6 @@ public class VideoController {
         return service.save(video) ? "uploaded" : "an error ocurred";
     }
 
-
     @GetMapping("/{id}/stream")
     public ResponseEntity<Resource> stream(@PathVariable UUID id) {
         return service.stream(id);
